@@ -1,0 +1,20 @@
+{
+  "name": "angular-practice",
+  "version": "1.0.0",
+  "description": "angular-practice",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yuying",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-mocks": "^1.5.0",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
+  }
+}

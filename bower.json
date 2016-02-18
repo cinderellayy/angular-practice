@@ -1,0 +1,18 @@
+{
+  "name": "angular-practice",
+  "description": "angular-practice",
+  "main": "index.js",
+  "authors": [
+    "yuying"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
