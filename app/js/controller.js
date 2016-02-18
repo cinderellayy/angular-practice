@@ -1,4 +1,4 @@
-var app = angular.module('test',[]);
+var app = angular.module('phonecatApp',[]);
 
 app.controller('PhoneListCtrl',['$scope',function($scope){
 	$scope.phones = [
