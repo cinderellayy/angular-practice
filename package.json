@@ -2,7 +2,7 @@
   "name": "angular-practice",
   "version": "1.0.0",
   "description": "angular-practice",
-  "main": "index.js",
+  "main": "index.html",
   "directories": {
     "test": "test"
   },

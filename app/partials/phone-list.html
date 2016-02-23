@@ -1,24 +1,48 @@
-  <div class="container-fluid">
-        <div class="row-fluid">
-            <div class="col-md-2">
-                Search:
-                <input ng-model="query">
-                Sort by:
-                <select ng-model="orderProp">
-                    <option value="name">Alphabetical</option>
-                    <option value="age">Age</option>
-                </select>
-            </div>
-            <div class="col-md-10">
-                <ul class="phones">
-                    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="col-md-2">
+            Search:
+            <input ng-model="query">
+            <br> Sort by:
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="age">Age</option>
+            </select>
+            <table>
+                <tr>
+                    <th>购物车详情</th>
+                </tr>
+                <tr>
+                    <td>名称</td>
+                    <td>数量</td>
+                    <td>价格</td>
+                </tr>
+                <tr ng-show="buyshow" ng-repeat="item in items">
+                    <td>{{item.name}}</td>
+                    <td>
+                        <input type="number" price-format ng-model="item.number" class="buynumber" ng-change="numberchange(phone)">
+                    </td>
+                    <td> {{item.price * item.number|currency : '￥'}}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">总价：{{sum|currency : '￥'}}</td>
+                    <td>
+                        <button ng-click="submit()">提交</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-10">
+            <ul class="phones">
+                <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
                     <a href="#/phones/{{phone.id}}" class="thumb"> <img ng-src="{{phone.imageUrl}}"></a>
-                       <a href="#/phones/{{phone.id}}/{{phone.age}}">www{{phone.name}}</a>
-                        <p>{{phone.snippet}}</p>
-                        <p>{{phone.age}}</p>
-                        <p>{{orderProp}}</p>
-                    </li>
-                </ul>
-            </div>
+                    <a href="#/phones/{{phone.id}}/{{phone.age}}">{{phone.name}}</a>
+                    <p>{{phone.snippet}}</p>
+                    价格： <span>{{phone.price}}</span>
+                    <br>
+                    <button ng-click="buyclick(phone)">加入购物车</button>
+                </li>
+            </ul>
         </div>
     </div>
+</div>

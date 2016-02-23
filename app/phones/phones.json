@@ -4,14 +4,17 @@
         "id": "motorola-xoom-with-wi-fi", 
         "imageUrl": "img/phones/motorola-xoom-with-wi-fi.0.jpg", 
         "name": "Motorola XOOM\u2122 with Wi-Fi", 
-        "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb)."
+        "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb).",
+        "price":2000,
+        "number":1
     }, 
     {
         "age": 1, 
         "id": "motorola-xoom", 
         "imageUrl": "img/phones/motorola-xoom.0.jpg", 
         "name": "MOTOROLA XOOM\u2122", 
-        "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+        "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb).",
+         "price":1000
     }, 
     {
         "age": 2, 
@@ -19,14 +22,16 @@
         "id": "motorola-atrix-4g", 
         "imageUrl": "img/phones/motorola-atrix-4g.0.jpg", 
         "name": "MOTOROLA ATRIX\u2122 4G", 
-        "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone."
+        "snippet": "MOTOROLA ATRIX 4G the world's most powerful smartphone.",
+         "price":5000
     }, 
     {
         "age": 3, 
         "id": "dell-streak-7", 
         "imageUrl": "img/phones/dell-streak-7.0.jpg", 
         "name": "Dell Streak 7", 
-        "snippet": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around."
+        "snippet": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around.",
+         "price":4000
     }, 
     {
         "age": 4, 
@@ -34,7 +39,8 @@
         "id": "samsung-gem", 
         "imageUrl": "img/phones/samsung-gem.0.jpg", 
         "name": "Samsung Gem\u2122", 
-        "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price."
+        "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price.",
+          "price":4000
     }, 
     {
         "age": 5, 
@@ -42,7 +48,8 @@
         "id": "dell-venue", 
         "imageUrl": "img/phones/dell-venue.0.jpg", 
         "name": "Dell Venue", 
-        "snippet": "The Dell Venue; Your Personal Express Lane to Everything"
+        "snippet": "The Dell Venue; Your Personal Express Lane to Everything",
+          "price":10020
     }, 
     {
         "age": 6, 
