@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('phonecatControllers', []);
 
-app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', function($scope, $http, Phone) {
+app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', 'submitService', function($scope, $http, Phone, submitService) {
     $scope.phones = Phone.query();
     $scope.orderProp = 'age';
     //初始化数组，以便为每一个ng-model分配一个对象
@@ -26,7 +26,6 @@ app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', function($scope, $h
 
         }
         $scope.calc();
-        $scope.buyshow = true;
     };
     $scope.numberchange = function(phone) {
             $scope.calc();
@@ -41,6 +40,19 @@ app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', function($scope, $h
             $scope.sum += val.number * val.price;
         });
 
+
+        // $http({
+        //         method: 'GET',
+        //         url: './data.json'
+        //     }, {
+        //         data: angular.toJson(array)
+
+        //     }).
+        //     then(function(response) {
+        //         alert('success')
+        //     }, function(response) {
+        //         alert('failed');
+        //     });
     }
 
     $scope.submit = function() {
@@ -48,7 +60,7 @@ app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', function($scope, $h
 
         var array = [];
 
-        console.log($scope.items);
+        // array = array.query();
         for (var i = 0; i < $scope.items.length; i++) {
 
             var item = $scope.items[i];
@@ -58,36 +70,13 @@ app.controller('PhoneListCtrl', ['$scope', '$http', 'Phone', function($scope, $h
                 number: item.nubmer
             });
         }
-
-        $http({ 
-            method: 'GET', 
-            url: './data.json'
-        },{
-            data: angular.toJson(array)
-
-        }).
-            then(function(response) {
-                alert('success')
-            }, function(response) {
-                alert('failed');
-            });
+        console.log(array);
+        submitService.submit(array).then(function(response) {
+            alert('success')
+        }, function(response) {
+            alert('failed');
+        });
     };
-
-    //   var req = {
-    //       method: 'GET',
-    //       url: './data.json',
-    //       data: {
-    //           purchas:  array
-    //       }
-    //   }
-    //   var deferred = $scope.defer();  
-    //   $http(req).then(function(res) {  
-    //   deferred.resolve(res);  
-    // }, function(res) {  
-    //   deferred.resolve(res);  
-    // });  
-
-// }
 }]);
 
 app.controller('PhoneDetailCtrl', ['$scope', 'Phone', '$routeParams',
@@ -108,7 +97,6 @@ app.directive('priceFormat', function() {
     return {
         scope: {
             number: '=ngModel'
-
         },
         link: function(scope, element, attrs) {
             // body...
@@ -119,7 +107,6 @@ app.directive('priceFormat', function() {
                 } else {
                     element.removeClass("red");
                 }
-                console.log(scope.number);
             });
 
 
